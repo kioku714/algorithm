@@ -7,22 +7,26 @@ import java.util.List;
 public class SumDivisor {
     public int sumDivisor(int num) {
         int answer = 0;
-        List<Integer> divisorList = new ArrayList<>();
+//        List<Integer> divisorList = new ArrayList<>();
         int root = (int) Math.floor(Math.sqrt(num));
 
         for(int i = 1; i <= root; i++) {
             if(num%i == 0) {
-                divisorList.add(i);
+                if(i != num/i) {
+                    answer += i + num/i;
+                } else {
+                    answer += i;
+                }
             }
         }
 
-        for(int i = 0; i < divisorList.size(); i++) {
-            if(divisorList.get(i) != num/divisorList.get(i)) {
-                answer += divisorList.get(i) + num/divisorList.get(i);
-            } else {
-                answer += divisorList.get(i);
-            }
-        }
+//        for(int i = 0; i < divisorList.size(); i++) {
+//            if(divisorList.get(i) != num/divisorList.get(i)) {
+//                answer += divisorList.get(i) + num/divisorList.get(i);
+//            } else {
+//                answer += divisorList.get(i);
+//            }
+//        }
 
         return answer;
     }
