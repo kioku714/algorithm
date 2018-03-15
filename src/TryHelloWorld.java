@@ -1,3 +1,5 @@
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Arrays;
 
 /**
@@ -33,7 +35,11 @@ public class TryHelloWorld {
 
     // 아래는 테스트로 출력해 보기 위한 코드입니다.
     public static void main(String[] args) {
+//        long startTIme = System.currentTimeMillis();
+        Instant start = Instant.now();
         TryHelloWorld c = new TryHelloWorld();
-        System.out.println(Arrays.toString(c.gcdlcm(3, 12)));
+        System.out.println(Arrays.toString(c.gcdlcm(24, 32452462)));
+//        System.out.println(System.currentTimeMillis() - startTIme);
+        System.out.println(Duration.between(Instant.now(), start));
     }
 }
