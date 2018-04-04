@@ -38,7 +38,7 @@ public class Ex9_1_5 {
                     if (index1 != index2) {
                         return false;
                     }
-                    index2++;
+                    index1++;
                 } else {
                     index1++;
                     index2++;
@@ -50,6 +50,6 @@ public class Ex9_1_5 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Ex9_1_5().isOneEdit("pales", "pale"));
+        System.out.println(new Ex9_1_5().isOneEdit("pale", "ale"));
     }
 }
